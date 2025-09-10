@@ -1,20 +1,21 @@
 {
-  "name": "Agenda SESMT",
+  "name": "Agenda Veículos",
   "short_name": "Agenda",
-  "start_url": "https://sites.google.com/view/agendadetreinamento/agenda-sesmt",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0b8457",
+  "theme_color": "#00796B",
   "icons": [
     {
-      "src": "https://murilohenrique2025-dev.github.io/Agenda-Sesmt/icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://murilohenrique2025-dev.github.io/Agenda-Sesmt/icon-512.png",
+      "src": "Agenda SESMT 2.ico",
       "sizes": "512x512",
       "type": "image/png"
     }
   ]
 }
+

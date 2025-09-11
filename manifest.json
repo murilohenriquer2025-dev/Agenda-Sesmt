@@ -1,50 +1,26 @@
 {
-  "id": "https://murilohenrique2025-dev.github.io/Agenda-Sesmt/",
+  "id": "./",
   "name": "Agenda Treinamentos - SESMT",
   "short_name": "Agenda SESMT",
-  "description": "Agenda de treinamentos - SESMT",
+  "description": "Link rápido para a Agenda SESMT",
   "lang": "pt-BR",
-  "start_url": "/Agenda-Sesmt/",
-  "scope": "/Agenda-Sesmt/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#00796B",
-  "categories": ["education","business"],
-  "prefer_related_applications": false,
-  "shortcuts": [
-    {
-      "name": "Abrir agenda",
-      "short_name": "Agenda",
-      "description": "Abrir Agenda SESMT",
-      "url": "/Agenda-Sesmt/",
-      "icons": [{ "src": "/Agenda-Sesmt/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" }]
-    }
-  ],
   "icons": [
     {
-      "src": "/Agenda-Sesmt/icons/icon-192.png",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/Agenda-Sesmt/icons/icon-512.png",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/Agenda-Sesmt/screenshots/shot1.png",
-      "sizes": "1080x2340",
-      "type": "image/png"
-    },
-    {
-      "src": "/Agenda-Sesmt/screenshots/shot2.png",
-      "sizes": "1080x2340",
-      "type": "image/png"
     }
   ]
 }

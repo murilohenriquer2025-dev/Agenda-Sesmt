@@ -1,51 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Agenda SESMT</title>
-  <!-- Caminho absoluto ao manifest (IMPORTANTE) -->
-  <link rel="manifest" href="/Agenda-Sesmt/manifest.json" />
-  <meta name="theme-color" content="#00796B" />
-  <style>
-    body { font-family: Arial, sans-serif; margin: 16px; }
-    iframe { width: 100%; height: 80vh; border: none; }
-    .notice { margin-top: 18px; }
-  </style>
-</head>
-<body>
-  <h1>Agenda SESMT</h1>
-  <p>Se a agenda não aparecer abaixo (alguns Google Sites bloqueiam iframe), use o link para abrir em nova aba:</p>
-  <p><a id="openLink" href="https://sites.google.com/view/agendadetreinamento/agenda-sesmt" target="_blank" rel="noopener">Abrir Agenda SESMT (Google Sites)</a></p>
-
-  <div id="frameContainer" class="notice"></div>
-
-  <script>
-    // === Registro do Service Worker (CAMINHO EXATO) ===
-    // O arquivo precisa estar em: /Agenda-Sesmt/service-worker.js
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/Agenda-Sesmt/service-worker.js')
-        .then(reg => {
-          console.log('Service Worker registrado em:', reg.scope);
-        })
-        .catch(err => {
-          console.error('Erro ao registrar Service Worker:', err);
-        });
-    } else {
-      console.warn('Service Worker não suportado neste navegador.');
-    }
-
-    // === Tenta embed em iframe (se o Google Sites bloquear, ficará em branco) ===
-    (function tryEmbed() {
-      try {
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://sites.google.com/view/agendadetreinamento/agenda-sesmt';
-        iframe.loading = 'lazy';
-        document.getElementById('frameContainer').appendChild(iframe);
-      } catch (e) {
-        console.warn('Erro ao criar iframe:', e);
-      }
-    })();
-  </script>
-</body>
-</html>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/Agenda-Sesmt/service-worker.js')
+    .then(reg => console.log('SW registrado com scope:', reg.scope))
+    .catch(err => console.error('Erro ao registrar SW:', err));
+}
+</script>

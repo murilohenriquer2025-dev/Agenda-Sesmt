@@ -1,3 +1,4 @@
+// service-worker.js simples e funcional
 const CACHE_NAME = 'agenda-sesmt-v1';
 const ASSETS = [
   '/Agenda-Sesmt/',
@@ -10,7 +11,9 @@ const ASSETS = [
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(ASSETS))
+      .catch(err => console.error('Erro ao cachear assets:', err))
   );
 });
 
@@ -23,6 +26,7 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Serve do cache quando possível, senão busca na rede
   event.respondWith(
     caches.match(event.request).then(resp => resp || fetch(event.request))
   );

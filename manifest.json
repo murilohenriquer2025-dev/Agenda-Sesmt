@@ -1,20 +1,20 @@
 {
-  "name": "Agenda Treinamentos",
-  "short_name": "Agenda SESMT",
-  "start_url": https://murilohenrique2025-dev.github.io/Agenda-Sesmt/,
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#00796B",
-  "icons": [
-    {
-      "src": "Agenda SESMT 2.ico",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "Agenda SESMT 2.ico",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "name": "Agenda Treinamentos",
+  "short_name": "Agenda SESMT",
+  "start_url": "https://murilohenrique2025-dev.github.io/Agenda-Sesmt/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00796B",
+  "icons": [
+    {
+      "src": "Agenda SESMT 2.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "Agenda SESMT 2.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

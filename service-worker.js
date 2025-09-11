@@ -1,8 +1,8 @@
 const CACHE_NAME = 'agenda-sesmt-v1';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
+  '/Agenda-Sesmt/',
+  '/Agenda-Sesmt/index.html',
+  '/Agenda-Sesmt/manifest.json',
   '/Agenda-Sesmt/icons/icon-192.png',
   '/Agenda-Sesmt/icons/icon-512.png'
 ];

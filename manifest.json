@@ -1,7 +1,7 @@
 {
-  "name": "Agenda Treinamentos",
+  "name": "Agenda Treinamentos - SESMT",
   "short_name": "Agenda SESMT",
-  "description": "Agenda de treinamentos SESMT",
+  "description": "Agenda de treinamentos - SESMT",
   "start_url": "/Agenda-Sesmt/",
   "scope": "/Agenda-Sesmt/",
   "display": "standalone",

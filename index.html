@@ -4,30 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Agenda SESMT</title>
-  <link rel="manifest" href="/manifest.json" />
+  <!-- Ajuste o caminho abaixo conforme a pasta onde publica (ex: /Agenda-Sesmt/) -->
+  <link rel="manifest" href="/Agenda-Sesmt/manifest.json" />
   <meta name="theme-color" content="#00796B" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    iframe { width: 100%; height: 85vh; border: none; }
+    .center { text-align: center; margin-top: 40px; }
+  </style>
 </head>
 <body>
   <h1>Agenda SESMT</h1>
-  <p>Se a página não abrir automaticamente, <a id="openLink" href="https://sites.google.com/view/agendadetreinamento/agenda-sesmt" target="_blank" rel="noopener">clique aqui para abrir a agenda</a>.</p>
+  <p>Se a agenda não abrir abaixo, clique no link para abrir em nova aba:</p>
+  <p><a id="openLink" href="https://sites.google.com/view/agendadetreinamento/agenda-sesmt" target="_blank" rel="noopener">Abrir Agenda SESMT (Google Sites)</a></p>
+
+  <div id="frameContainer" class="center"></div>
 
   <script>
-    // registra o service worker
+    // Registrar service worker (ajuste caminho conforme onde colocar o arquivo)
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('/Agenda-Sesmt/service-worker.js')
         .then(() => console.log('Service Worker registrado.'))
         .catch(err => console.warn('Erro ao registrar SW:', err));
     }
 
-    // tenta abrir em iframe — se o Google Sites bloquear, o link acima abre em nova aba
+    // Tentar embutir o Google Sites em um iframe (muitos Sites bloqueiam iframe; se bloquear, ficará em branco)
     (function tryEmbed() {
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://sites.google.com/view/agendadetreinamento/agenda-sesmt';
-      iframe.style.width = '100%';
-      iframe.style.height = '90vh';
-      iframe.style.border = '0';
-      // coloque dentro de um try/catch, se for bloqueado ainda deixa o link
-      document.body.appendChild(iframe);
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://sites.google.com/view/agendadetreinamento/agenda-sesmt';
+        iframe.loading = 'lazy';
+        document.getElementById('frameContainer').appendChild(iframe);
+      } catch (e) {
+        console.warn('Erro ao criar iframe:', e);
+      }
     })();
   </script>
 </body>

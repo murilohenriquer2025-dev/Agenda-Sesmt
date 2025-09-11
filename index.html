@@ -1,39 +1,26 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agenda SESMT</title>
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#00796B">
-  <style>body{font-family:Arial,Helvetica,sans-serif;margin:18px} iframe{width:100%;height:82vh;border:0}</style>
 </head>
 <body>
-  <h1>Agenda SESMT</h1>
-  <p>Se a agenda abaixo não carregar (alguns Google Sites bloqueiam iframe), use o link para abrir em nova aba:</p>
-  <p><a href="https://sites.google.com/view/agendadetreinamento/agenda-sesmt" target="_blank" rel="noopener">Abrir Agenda SESMT (Google Sites)</a></p>
 
-  <div id="frameContainer"></div>
-
+  <!-- Seu site é redirecionado para esta URL. -->
   <script>
-    // registra o service worker (arquivo no mesmo nível: service-worker.js)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('SW registrado com scope:', reg.scope))
-        .catch(err => console.warn('Erro ao registrar SW:', err));
-    }
-
-    // tenta embutir o Google Sites (se o site bloquear, ficará em branco mas o link acima funciona)
-    (function tryEmbed() {
-      try {
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://sites.google.com/view/agendadetreinamento/agenda-sesmt';
-        iframe.loading = 'lazy';
-        document.getElementById('frameContainer').appendChild(iframe);
-      } catch(e) {
-        console.warn('Erro ao criar iframe:', e);
-      }
-    })();
+    window.location.href = "https://sites.google.com/view/agendatreinamentosagenda-sesmt/";
   </script>
+
+  <!-- Código para registrar o Service Worker. -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker registrado com sucesso!', reg))
+        .catch(err => console.log('Erro ao registrar Service Worker:', err));
+    }
+  </script>
+
 </body>
 </html>
